@@ -28,7 +28,45 @@
 </head>
 
 <body>
+    <main>
 
+        <!-- Section Players -->
+        <section id="game" class="py-3">
+            <div class="container text-center">
+                <h1>Lancia i dadi</h1>
+                <div class="content d-flex gap-3 justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/player1-b.jpg" class="card-img-top" alt="player1">
+                        <div class="card-body">
+                            <h5 class="card-title">Player 1</h5>
+                            <p class="card-text" id="first-player"></p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/player2-b.jpg" class="card-img-top" alt="player2">
+                        <div class="card-body">
+                            <h5 class="card-title">Player 2</h5>
+                            <p class="card-text" id="second-player"></p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary mt-3" id="action">Lancia i dadi</button>
+                <h2 class="my-3">Il vincitore è:</h2>
+                <div class="alert alert-warning d-none" role="alert" id="draw">
+                    <h3>Pareggio</h3>
+                </div>
+                <div class="content d-flex gap-3 justify-content-center">
+                    <div class="card d-none" style="width: 18rem;" id="p1-win">
+                        <img src="img/player1-b.jpg" class="card-img-top" alt="player1">
+                    </div>
+                    <div class="card d-none" style="width: 18rem;" id="p2-win">
+                        <img src="img/player2-b.jpg" class="card-img-top" alt="player2">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
+
 
 </html>
