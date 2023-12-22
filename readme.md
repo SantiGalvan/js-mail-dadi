@@ -47,3 +47,16 @@ Buon lavoro e buon divertimento!
 - 11 In caso di pareggio metto un alert che indica il pareggio
 - 12 Rimuovo gli elementi precedentemente creati in pagina
 - 13 Rimuovo l'eventuale vincitore o l'alert di pareggio
+
+## Scompongo il problema -- Esercizio 2
+- 1 Prendo gli elementi dal DOM
+- 2 Creo la lista di email autorizzate
+- 3 Creo un event listener al click del bottone
+- 4 Recupero il valore dell'input
+- 5 Controllo che il valore recuperato non sia all'interno della lista di email
+- 6 Se il valore non è all'interno della mia lista aggiungo un alert di errore
+- 7 Se il valore è all'interno della mia lista aggiungo un alert di conferma
+- 8 Faccio sparire un eventuale alert di errore
+- 9 Faccio sparire un eventuale alert di errore
+- 10 Faccio un controllo sull'alert di errore
+- 11 Faccio un controllo sull'alert di conferma
