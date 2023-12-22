@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mail Dadi</title>
+    <title>Prova Dadi</title>
 
 
     <!-- Google Fonts -->
@@ -30,8 +30,14 @@
 <body>
     <main>
 
-        <!-- Section Players -->
-        <section id="game" class="py-3">
+        <!-- Section Choice -->
+        <section id="choice" class="py-3 text-center">
+            <button class="btn btn-secondary mx-2" id="first-exercise">Esercizio 1</button>
+            <button class="btn btn-info mx-2" id="second-exercise">Esercizio 2</button>
+        </section>
+
+        <!-- Section Game -->
+        <section id="game" class="py-3 d-none">
             <div class="container text-center">
                 <h1>Lancia i dadi</h1>
                 <div class="content d-flex gap-3 justify-content-center">
@@ -65,8 +71,30 @@
                 </div>
             </div>
         </section>
+
+        <!-- Section Email -->
+        <section id="mail" class="py-3">
+            <div class="container">
+                <div class="content d-flex justify-content-center align-items-end gap-3">
+                    <div class="mb-3">
+                        <label for="email-input" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email-input" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <button type="button" class="btn btn-primary" id="button-email">Accedi</button>
+                    </div>
+                </div>
+                <div class="alert alert-danger text-center my-3 d-none" role="alert" id="error-alert">
+                    <h3>Email sbagliata</h3>
+                </div>
+                <div class="alert alert-success text-center my-3 d-none" role="alert" id="success-alert">
+                    <h3>Email giusta</h3>
+                </div>
+            </div>
+        </section>
+
+
     </main>
 </body>
-
 
 </html>
