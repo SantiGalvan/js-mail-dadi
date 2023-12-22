@@ -12,7 +12,7 @@ body {
 
 /* ? Main */
 
-/* Section Players */
+/* Section Game */
 .card-body p {
     font-size: 30px;
     font-weight: 600;
@@ -26,4 +26,9 @@ body {
 #p2-win {
     border: 2px solid orangered;
     box-shadow: 0 0 5px orangered;
+}
+
+/* Section Email */
+#mail-input {
+    display: inline;
 }
