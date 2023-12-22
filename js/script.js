@@ -149,3 +149,39 @@ console.log(emalInput, buttonsEmail, errorAlert, successAlert);
 // - 2 Creo la lista di email autorizzate
 const emails = ['santiago@esercizio2.it', 'galvan@esercizio2.com', 'santiagogalvan@esercizio2.com'];
 console.log(emails);
+
+// - 3 Creo un event listener al click del bottone
+buttonsEmail.addEventListener('click', function () {
+
+    // - 4 Recupero il valore dell'input
+    const emailUser = emalInput.value.trim();
+    console.log(emailUser);
+
+    // - 5 Controllo che il valore recuperato non sia all'interno della lista di email
+    if (emailUser !== emails[0] && emailUser !== emails[1] && emailUser !== emails[2]) {
+        console.log('Email sbagliata');
+
+        // - 9 Faccio sparire un eventuale alert di errore
+        successAlert.classList.add('d-none');
+
+        // - 10 Faccio un controllo sull'alert di errore
+        if (errorAlert.classList.contains('d-none')) {
+
+            // - 6 Se il valore non è all'interno della mia lista aggiungo un alert di errore
+            errorAlert.classList.remove('d-none');
+        }
+
+    } else {
+
+        // - 11 Faccio un controllo sull'alert di conferma
+        if (successAlert.classList.contains('d-none')) {
+
+            // - 7 Se il valore è all'interno della mia lista aggiungo un alert di conferma
+            successAlert.classList.remove('d-none');
+        }
+
+        // - 8 Faccio sparire un eventuale alert di errore
+        errorAlert.classList.add('d-none');
+    }
+
+})
