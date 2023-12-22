@@ -77,3 +77,44 @@ buttonAction.addEventListener('click', function () {
     console.log(message);
 
 })
+
+
+/*
+Divido l'esercizio in due, con un tasto apri il primo e con un altro tasto apri il secondo
+- 1 Recupero tutti gli elementi dal DOM
+- 2 Creo un event listener al click del bottone Esercizio 1
+- 3 Creo un event listener al click del bottone Esercizio 2
+- 4 premedno il tasto Esercizio 1 rimuovo il d-none dalla section game
+- 5 premedno il tasto Esercizio 2 rimuovo il d-none dalla section email
+- 6 premedno il tasto Esercizio 1 aggiungo il d-none dalla section email
+- 7 premedno il tasto Esercizio 2 aggiungo il d-none dalla section game
+*/
+
+// - 1 Recupero tutti gli elementi dal DOM
+const sectionGame = document.getElementById('game');
+const sectionMail = document.getElementById('mail');
+console.log(sectionGame, sectionMail);
+
+const buttonExerciseGame = document.getElementById('first-exercise');
+const buttonExerciseMail = document.getElementById('second-exercise');
+console.log(buttonExerciseGame, buttonExerciseMail);
+
+// - 2 Creo un event listener al click del bottone Esercizio 1
+buttonExerciseGame.addEventListener('click', function () {
+
+    // - 4 premedno il tasto Esercizio 1 rimuovo il d-none dalla section game
+    sectionGame.classList.remove('d-none');
+
+    // - 6 premedno il tasto Esercizio 1 aggiungo il d-none dalla section email
+    sectionMail.classList.add('d-none');
+})
+
+// - 3 Creo un event listener al click del bottone Esercizio 2
+buttonExerciseMail.addEventListener('click', function () {
+
+    // - 5 premedno il tasto Esercizio 2 rimuovo il d-none dalla section email
+    sectionMail.classList.remove('d-none');
+
+    // - 7 premedno il tasto Esercizio 2 aggiungo il d-none dalla section game
+    sectionGame.classList.add('d-none');
+})
