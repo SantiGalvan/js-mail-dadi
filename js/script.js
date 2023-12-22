@@ -118,3 +118,34 @@ buttonExerciseMail.addEventListener('click', function () {
     // - 7 premedno il tasto Esercizio 2 aggiungo il d-none dalla section game
     sectionGame.classList.add('d-none');
 })
+
+
+
+
+/*
+Scompongo il problema -- Esercizio 2
+- 1 Prendo gli elementi dal DOM
+- 2 Creo la lista di email autorizzate
+- 3 Creo un event listener al click del bottone
+- 4 Recupero il valore dell'input
+- 5 Controllo che il valore recuperato non sia all'interno della lista di email
+- 6 Se il valore non è all'interno della mia lista aggiungo un alert di errore
+- 7 Se il valore è all'interno della mia lista aggiungo un alert di conferma
+- 8 Faccio sparire un eventuale alert di errore
+- 9 Faccio sparire un eventuale alert di errore
+- 10 Faccio un controllo sull'alert di errore
+- 11 Faccio un controllo sull'alert di conferma
+*/
+
+// - 1 Prendo gli elementi dal DOM
+const emalInput = document.getElementById('email-input');
+const buttonsEmail = document.getElementById('button-email');
+
+const errorAlert = document.getElementById('error-alert');
+const successAlert = document.getElementById('success-alert');
+
+console.log(emalInput, buttonsEmail, errorAlert, successAlert);
+
+// - 2 Creo la lista di email autorizzate
+const emails = ['santiago@esercizio2.it', 'galvan@esercizio2.com', 'santiagogalvan@esercizio2.com'];
+console.log(emails);
