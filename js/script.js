@@ -67,7 +67,7 @@ buttonAction.addEventListener('click', function () {
         winSecondPlayer.classList.remove('d-none');
 
 
-    } else if (firstPlayer === secondPlayer) {
+    } else {
 
         // - 11 In caso di pareggio metto un alert che indica il pareggio
         draw.classList.remove('d-none');
@@ -157,31 +157,41 @@ buttonsEmail.addEventListener('click', function () {
     const emailUser = emalInput.value.trim();
     console.log(emailUser);
 
-    // - 5 Controllo che il valore recuperato non sia all'interno della lista di email
-    if (emailUser !== emails[0] && emailUser !== emails[1] && emailUser !== emails[2]) {
-        console.log('Email sbagliata');
+    // - 5 Controllo che il valore recuperato non sia all'interno della lista di email con un ciclo for
+    for (let i = 0; i < emails.length; i++) {
 
-        // - 9 Faccio sparire un eventuale alert di errore
-        successAlert.classList.add('d-none');
 
-        // - 10 Faccio un controllo sull'alert di errore
-        if (errorAlert.classList.contains('d-none')) {
+        if (emailUser !== emails[i]) {
+            console.log('Email sbagliata');
 
-            // - 6 Se il valore non è all'interno della mia lista aggiungo un alert di errore
-            errorAlert.classList.remove('d-none');
+            // - 9 Faccio sparire un eventuale alert di errore
+            successAlert.classList.add('d-none');
+
+            // - 10 Faccio un controllo sull'alert di errore
+            if (errorAlert.classList.contains('d-none')) {
+
+                // - 6 Se il valore non è all'interno della mia lista aggiungo un alert di errore
+                errorAlert.classList.remove('d-none');
+            }
+
+            return;
+
+
+        } else {
+            console.log('Email giusta');
+
+            // - 11 Faccio un controllo sull'alert di conferma
+            if (successAlert.classList.contains('d-none')) {
+
+                // - 7 Se il valore è all'interno della mia lista aggiungo un alert di conferma
+                successAlert.classList.remove('d-none');
+            }
+
+            // - 8 Faccio sparire un eventuale alert di errore
+            errorAlert.classList.add('d-none');
+
+            return;
         }
 
-    } else {
-
-        // - 11 Faccio un controllo sull'alert di conferma
-        if (successAlert.classList.contains('d-none')) {
-
-            // - 7 Se il valore è all'interno della mia lista aggiungo un alert di conferma
-            successAlert.classList.remove('d-none');
-        }
-
-        // - 8 Faccio sparire un eventuale alert di errore
-        errorAlert.classList.add('d-none');
     }
-
 })
